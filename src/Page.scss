@@ -1,0 +1,171 @@
+// -----------------------------------------------
+// Page Styling //////////////////////////////////
+// -----------------------------------------------
+
+h1 {
+  color: lighten(#230c33, 30%);
+  margin-bottom: 1rem;
+  font-size: 150%;
+}
+
+h2 {
+  color: lighten(#230c33, 10%);
+  margin-bottom: 1rem;
+  font-size: 120%;
+}
+
+h3 {
+  color: lighten(#230c33, 30%);
+  margin-bottom: 0.5rem;
+  font-size: 90%;
+}
+
+section {
+  color: #161616;
+}
+
+// -----------------------------------------------
+// Form Styling //////////////////////////////////
+// -----------------------------------------------
+
+p.inconspicuous {
+  margin: 2rem 0;
+  color: MistyRose;
+}
+
+form {
+  h3.formTitle {
+    color: lighten(#230c33, 20%);
+    margin-top: 1rem;
+  }
+  div.formInstructions {
+    color: #161616;
+    margin: 2rem 0;
+    p {
+      span.advice { color: darken(#29e7cd, 10%); font-weight: 500; }
+      span.action { 
+        font-size: 80%; 
+        font-weight: 600; 
+        color: White; 
+        padding: 3px; 
+        border-radius: 3px; 
+        background: darken(#29e7cd, 10%); 
+        &::before, &::after { content: "\00a0\00a0\00a0"; }
+      }
+    }
+  }
+  div.formEntry select,
+  div.formEntry input,
+  div.formAction button {
+    width: 100%;
+    padding: 3px;
+    margin: 1px 0;
+    border-radius: 2px;
+    border: 1px solid lighten(#230c33, 30%);
+    background: White;
+  }
+  div.formEntry {
+    label {
+      color: lighten(#230c33, 30%);
+      font-weight: 600;
+    }
+    input,
+    select {
+      &:hover,
+      &:focus {
+        outline: 0;
+        margin: 0 0;
+      }
+      &:hover { border: 2px solid lighten(#230c33, 57%); }
+      &:focus { border: 2px solid #29e7cd; }
+    }
+  }
+  div.formError {
+    p.errorMessage {
+      color: darken(#edafb8, 20%);
+      margin-bottom: 1rem;
+    }
+  }
+  div.formAction {
+    button {
+      margin-top: 1.3rem;
+      padding: 4px;
+      border-radius: 3px;
+      font-size: 85%;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 4px 4px 8px 4px rgba(100,50,100,0.4);
+      }
+      &.primaryAction {
+        color: White;
+        background: darken(#29e7cd, 10%);
+        border: 1px solid darken(#29e7cd, 10%);
+        font-weight: 600;
+      }
+      &.secondaryAction {
+        color: White;
+        background: darken(#edafb8, 20%);
+        border: 1px solid darken(#edafb8, 20%);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------
+// Draggable/Droppable Styling ///////////////////
+// -----------------------------------------------
+
+main.mylinks {
+  padding: 0.5rem;
+  background: WhiteSmoke;
+  display: flex;
+  flex-direction: column;
+  div.paneProposals {
+    div.droppableRegion {
+      margin: 0 0 1rem 0;
+      padding: 1rem;
+      border: 2px dashed lighten(#230c33, 64%);
+      border-radius: 7px;
+      min-height: 100px;
+    }
+  }
+  div.paneSearch {
+    div.formEntry { margin-bottom: 0.5rem;}
+  }
+  div.draggableItems {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+div.name {
+  display: inline-block;
+  font-size: 90%;
+  margin: 2px;
+  padding: 2px 5px;
+  border: 1px solid DarkGrey;
+  border-radius: 2px;
+  background: White;
+}
+
+@media (min-width: 700px) {
+  main.mylinks { flex-direction: row; gap: 2rem; }
+  div.paneProposals { flex: 3 }
+  div.paneSearch { flex: 3; }
+}
+
+.card {
+  margin: auto;
+  padding: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
+  border: 0px;
+  border-radius: 3px;
+  background: White;
+  box-shadow: 4px 4px 8px 4px rgba(100,50,00,0.3);
+  max-width: 100%;
+}
